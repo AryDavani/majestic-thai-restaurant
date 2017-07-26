@@ -17,13 +17,12 @@ body {
   text-transform: uppercase;
 }
 .center-nav li {
-  margin: 0 50px;
+  margin: 20px 50px;
 }
 
 .center-nav li:hover {
   cursor: pointer;
   color: #006e18;
-  font-size: 16.2px;
 }
 
 footer {
@@ -34,4 +33,27 @@ footer {
   padding: 0.5em;
   border-top: 1px solid #006e18;
   text-align: right;
+}
+
+.card {
+  width: 200px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
 }

@@ -11,7 +11,6 @@ export default class BaseLayout extends React.Component {
     return (
       <div>
         <Navbar />
-        <HomeImg />
           {this.props.children}
         <Footer />
       </div>
