@@ -3,6 +3,7 @@ import '../styles/App.css';
 
 import BaseLayout from '../components/BaseLayout';
 import Menu from '../components/Menu';
+import HomeImg from '../components/HomeImg';
 
 class App extends Component {
   render() {
@@ -12,7 +13,6 @@ class App extends Component {
         <BaseLayout>
           <Menu />
         </BaseLayout>
-
       </div>
     );
   }
