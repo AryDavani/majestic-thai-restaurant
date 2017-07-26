@@ -1,5 +1,39 @@
+/*
+Colors
+green: #006e18
+*/
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.center-nav {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  text-transform: uppercase;
+}
+.center-nav li {
+  margin: 0 50px;
+}
+
+.center-nav li:hover {
+  cursor: pointer;
+  color: #006e18;
+  font-size: 16.2px;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.5em;
+  color: #006e18;
+  border-top: 1px solid #006e18;
+  text-align: right;
+
 }
