@@ -9,7 +9,7 @@ export default class Menu extends Component {
       menu: [],
       categoryItems: []
     }
-    
+
     this._handleSelect = this._handleSelect.bind(this);
   }
 
@@ -31,8 +31,6 @@ export default class Menu extends Component {
       console.log("state", this.state.menu);
     })
   }
-
-
 
   render() {
     console.log("second log", this.state.menu);

@@ -18,11 +18,15 @@ body {
 }
 .center-nav li {
   margin: 20px 50px;
+  padding: 2px;
 }
 
 .center-nav li:hover {
   cursor: pointer;
+  font-size: 18px;
   color: #006e18;
+  padding: 0px;
+  margin: 19px 49px;
 }
 
 footer {
@@ -31,7 +35,6 @@ footer {
   bottom: 0;
   left: 0;
   padding: 0.5em;
-  border-top: 1px solid #006e18;
   text-align: right;
 }
 
