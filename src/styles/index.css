@@ -64,25 +64,31 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /*height: 800px;*/
 }
 
 img {
   max-width: 100%;
 }
+
 .menu-nav {
   display: flex;
   justify-content: flex-start;
 }
+
 .menu-nav input {
   margin: 0px 50px;
 }
+
 input {
   font-family: 'Kranky', cursive;
   border-style: none;
   background-color: white;
   font-size: 30px;
   outline: none;
+}
+
+input::selection {
+  color: red;
 }
 
 input:hover {

@@ -6,8 +6,12 @@ export default class Menu extends Component {
     super();
 
     this.state = {
-      menu: [],
-      categoryItems: []
+      menu: {
+        Appetizers: [],
+        Entrees: [],
+        Desserts: []
+      },
+      category: 'Appetizers'
     }
 
     this._handleSelect = this._handleSelect.bind(this);
@@ -16,7 +20,7 @@ export default class Menu extends Component {
   _handleSelect(event) {
 
     this.setState({
-      categoryItems: this.state.menu[event.target.value]
+      category: event.target.value
     });
   }
 
@@ -34,7 +38,7 @@ export default class Menu extends Component {
   render() {
     console.log("second log", this.state.menu);
 
-    let categoryItems = this.state.categoryItems.map(function(item){
+    let categoryItems = this.state.menu[this.state.category].map(function(item){
       return <MenuItem key={ item.dish } item={ item } />
     });
 
