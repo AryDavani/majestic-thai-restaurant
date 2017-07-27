@@ -25,8 +25,7 @@ export default class Menu extends Component {
       return results.json();
     }).then(data => {
       this.setState({
-        menu: data[0],
-        categoryItems: data[0].Appetizers
+        menu: data[0]
       });
       console.log("state", this.state.menu);
     })
@@ -41,9 +40,12 @@ export default class Menu extends Component {
 
     return(
       <div>
-        <input value="Appetizers" type="button" onClick={ this._handleSelect } />
-        <input value="Entrees" type="button" onClick={ this._handleSelect } />
-        <div className="flex">
+        <div className="menu-nav">
+          <input value="Appetizers" type="button" onClick={ this._handleSelect } />
+          <input value="Entrees" type="button" onClick={ this._handleSelect } />
+          <input value="Desserts" type="button" onClick={ this._handleSelect } />
+        </div>
+        <div className="menu-display">
           { categoryItems }
         </div>
       </div>

@@ -8,9 +8,9 @@ export default class MenuItem extends Component {
   render() {
     return(
       <div className="card">
-        <p className="left-align">{ this.props.item.dish }</p>
-        <p className="left-align">{ this.props.item.description }</p>
-        <p className="center-align">${ this.props.item.price }</p>
+        <p>{ this.props.item.dish }</p>
+        <p>{ this.props.item.description }</p>
+        <p>${ this.props.item.price }</p>
       </div>
     )
   }
