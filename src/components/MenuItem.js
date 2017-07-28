@@ -22,8 +22,9 @@ export default class MenuItem extends Component {
   }
 
   _handleQty(event) {
+    let qty = Number(event.target.value);
     this.setState({
-      qty: event.target.value
+      qty
     })
   }
 

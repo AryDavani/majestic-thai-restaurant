@@ -45,16 +45,18 @@ export default class Menu extends Component {
     let total = this.state.order.total;
     let items = this.state.order.items;
 
-    console.log("menuItem", menuItem);
-    console.log("totalprice", price);
+    // console.log("menuItem", menuItem);
+    // console.log("totalprice", price);
+    // total = total.toFixed(2) + price
+    items.push(menuItem);
+    total += price;
 
     this.setState({
       order: {
-        total: (total + price),
-        items: items.push(menuItem)
+        total,
+        items
       }
     })
-    console.log("state", this.state.order);
   }
 
   render() {
@@ -70,7 +72,7 @@ export default class Menu extends Component {
           <input value="Entrees" type="button" onClick={ this._handleSelect } />
           <input value="Desserts" type="button" onClick={ this._handleSelect } />
         </div>
-        <button className="order-button" onClick={ this.state._handleYourOrder }>Place Order </button>
+        <button className="btn" onClick={ this.state._handleYourOrder }>Place Order {this.state.order.items.length}</button>
         <h1>{this.state.order.total}</h1>
         <div className="menu-display">
           { categoryItems }
