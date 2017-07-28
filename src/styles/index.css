@@ -8,7 +8,7 @@ body {
 
 .fixed-nav {
   width: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, .9);
   position: fixed;
   top: 0;
 }
@@ -31,20 +31,19 @@ body {
 .center-nav a:hover {
   cursor: pointer;
   color: #fff;
-  text-shadow: 0 0 2px rgb(0, 101, 13);
+  text-shadow: 0 0 2px rgb(0, 80, 10);
 }
 
 footer {
   padding: 0.5em;
   width: 100%;
-  background-color: rgb(0, 101, 13);
+  background-color: rgb(0, 80, 10);
   color: white;
 }
 
 .card {
-  width: 300px;
-  margin: 50px;
-  padding: 10px;
+  width: 60%;
+  padding: 0px;
   text-align: left;
 }
 
@@ -60,10 +59,19 @@ footer {
   text-align: center;
 }
 
+.order-button{
+}
+
 .menu-display {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 60px;
+  /*justify-content: center;*/
+  /*flex-wrap: wrap;*/
+}
+
+.home-image{
+  margin-top: 88px;
 }
 
 img {
@@ -86,9 +94,22 @@ input {
   font-size: 30px;
   outline: none;
 }
+.btn {
+  background-color: white;
+  color: rgb(0, 80, 10);
+  outline: none;
+  font-size: 14px;
+  border: rgb(0, 80, 10) 1px solid;
+  margin-left: 20px;
+  border-radius: 50px;
+  height: 60px;
+  width: 60px;
+}
 
-input::selection {
-  color: red;
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(0, 80, 10);
+  color: white;
 }
 
 input:hover {
