@@ -3,8 +3,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  min-height: 100vh;
 }
-
+.dish {
+  font-size: 20px;
+  font-variant: small-caps;
+}
 .fixed-nav {
   width: 100%;
   background-color: rgba(255, 255, 255, .8);
@@ -15,14 +19,12 @@ body {
   background-color: rgba(255, 255, 255, .8);
 }
 .center-flex {
-  align-items: flex-end;
+  align-items: center;
 }
 .flex-grow {
   flex-grow: 1;
 }
-.price {
 
-}
 .center-nav {
   text-decoration: none;
   display: flex;
@@ -56,6 +58,7 @@ footer {
   width: 60%;
   padding: 0px;
   text-align: left;
+  border-top: solid gray 1px;
 }
 
 .flex{
@@ -76,8 +79,7 @@ footer {
 .menu-display {
   display: flex;
   flex-direction: column;
-  padding: 60px;
-  /*justify-content: center;*/
+  align-items: center;
   /*flex-wrap: wrap;*/
 }
 
@@ -91,15 +93,20 @@ img {
 
 .menu-nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  margin: 40px 0px;
+  align-items: center;
 }
 
 .menu-nav input {
   margin: 0px 50px;
 }
-
+.description{
+  padding: 0px 20px 10px 10px;
+}
 input {
-  font-family: 'Kranky', cursive;
+  /*font-family: 'Kranky', cursive;*/
+  font-variant: small-caps;
   border-style: none;
   background-color: white;
   font-size: 30px;
@@ -129,6 +136,14 @@ input {
   width: 140px;
 }
 
+.order-btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(0, 80, 10);
+  border-color: rgb(0, 80, 10);
+  /*box-shadow: 0 0 10px 0 rgb(0, 80, 10);*/
+}
+
 .btn:hover {
   cursor: pointer;
   background-color: rgb(0, 80, 10);
@@ -137,4 +152,6 @@ input {
 
 input:hover {
   cursor: pointer;
+  color: white;
+  text-shadow: 0 0 1px rgb(0, 80, 10);
 }
