@@ -61,19 +61,20 @@ export default class Menu extends Component {
 
   render() {
     let that = this;
+
     let categoryItems = this.state.menu[this.state.category].map(function(item){
       return <MenuItem key={ item.dish } item={ item } handleAddToOrder={ that._handleAddToOrder }/>
+
     });
 
     return(
-      <div>
+      <div className="menu">
         <div className="menu-nav">
           <input value="Appetizers" type="button" onClick={ this._handleSelect } />
           <input value="Entrees" type="button" onClick={ this._handleSelect } />
           <input value="Desserts" type="button" onClick={ this._handleSelect } />
+          <button className="order-btn" onClick={ this.state._handleYourOrder }>Place Order {this.state.order.items.length}</button>
         </div>
-        <button className="btn" onClick={ this.state._handleYourOrder }>Place Order {this.state.order.items.length}</button>
-        <h1>{this.state.order.total}</h1>
         <div className="menu-display">
           { categoryItems }
         </div>

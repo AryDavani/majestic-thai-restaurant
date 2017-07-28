@@ -3,7 +3,7 @@ import '../styles/App.css';
 
 import BaseLayout from '../components/BaseLayout';
 import Menu from '../components/Menu';
-import HomeImg from '../components/HomeImg';
+
 
 class App extends Component {
 
@@ -11,7 +11,6 @@ class App extends Component {
     return (
       <div className="App">
         <BaseLayout>
-          <HomeImg />
           <Menu />
         </BaseLayout>
       </div>

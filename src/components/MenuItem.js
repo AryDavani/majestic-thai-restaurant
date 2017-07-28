@@ -30,10 +30,12 @@ export default class MenuItem extends Component {
 
   render() {
     return(
-      <div className="card">
-        <p>{ this.props.item.dish }</p>
-        <p>{ this.props.item.description }</p>
-        <div className="flex">
+      <div className="card flex">
+        <div className="flex-grow">
+          <p>{ this.props.item.dish }</p>
+          <p>{ this.props.item.description }</p>
+        </div>
+        <div className="flex center-flex">
           <p>${ this.props.item.price }</p>
           <select onChange={ this._handleQty } className="btn">
             <option value="1">1</option>
