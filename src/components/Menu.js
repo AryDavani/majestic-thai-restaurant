@@ -24,7 +24,6 @@ export default class Menu extends Component {
   }
 
   _handleSelect(event) {
-
     this.setState({
       category: event.target.value
     });
@@ -42,21 +41,20 @@ export default class Menu extends Component {
   }
 
   _handleAddToOrder(menuItem) {
-    let price = Number(menuItem.price);
+    let price = (Number(menuItem.price) * menuItem.qty);
     let total = this.state.order.total;
+    let items = this.state.order.items;
 
-    console.log("working", typeof menuItem.name);
-    console.log('current price', this.state.order.total);
-    console.log('menu item price', price);
+    console.log("menuItem", menuItem);
+    console.log("totalprice", price);
 
     this.setState({
       order: {
         total: (total + price),
-        items: []
+        items: items.push(menuItem)
       }
     })
-    console.log(this.state.order);
-
+    console.log("state", this.state.order);
   }
 
   render() {
@@ -73,6 +71,7 @@ export default class Menu extends Component {
           <input value="Desserts" type="button" onClick={ this._handleSelect } />
         </div>
         <button className="order-button" onClick={ this.state._handleYourOrder }>Place Order </button>
+        <h1>{this.state.order.total}</h1>
         <div className="menu-display">
           { categoryItems }
         </div>

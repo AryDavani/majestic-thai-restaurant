@@ -101,10 +101,12 @@ input {
   font-size: 14px;
   border: rgb(0, 80, 10) 1px solid;
   margin-left: 20px;
-  border-radius: 50px;
+  border-radius: 10%;
   height: 60px;
   width: 60px;
 }
+
+
 
 .btn:hover {
   cursor: pointer;
