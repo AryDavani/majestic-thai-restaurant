@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
-import Footer from './Footer';
+// import Footer from './Footer';
 
 export default class BaseLayout extends React.Component {
 
@@ -9,7 +9,6 @@ export default class BaseLayout extends React.Component {
       <div>
         <Navbar />
           {this.props.children}
-        <Footer />
       </div>
     )
   }

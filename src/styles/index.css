@@ -5,91 +5,70 @@ body {
   font-family: sans-serif;
   min-height: 100vh;
 }
-.dish {
-  font-size: 20px;
-  font-variant: small-caps;
-}
+
+
+/* ---------------------------------------------------------- MAIN NAVIGATION */
+
 .fixed-nav {
   width: 100%;
   background-color: rgba(255, 255, 255, .8);
   /*position: fixed;
   top: 0;*/
 }
-.menu {
-  background-color: rgba(255, 255, 255, .8);
+.center-nav {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  text-transform: uppercase;
+  font-family: 'Fredericka the Great', cursive;
 }
+.center-nav a {
+  color: black;
+  text-decoration: none;
+  margin: 20px 50px;
+  font-size: 40px;
+}
+.center-nav a:hover {
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0 0 2px rgb(0, 80, 10);
+}
+.selected {
+  color: red;
+}
+
+
+
+/* ------------------------------------------------------------ FLEX BOX STYLING */
+
 .center-flex {
   align-items: center;
 }
 .flex-grow {
   flex-grow: 1;
 }
-
-.center-nav {
-  text-decoration: none;
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  text-transform: uppercase;
-  /*font-family: 'Cabin Sketch', cursive;*/
-  font-family: 'Fredericka the Great', cursive;
-  /*font-family: 'Kranky', cursive;*/
-}
-.center-nav a {
-  margin: 20px 50px;
-  font-size: 40px;
-  color:
-}
-
-.center-nav a:hover {
-  cursor: pointer;
-  color: #fff;
-  text-shadow: 0 0 2px rgb(0, 80, 10);
-}
-
-footer {
-  padding: 0.5em;
-  width: 100%;
-  background-color: rgb(0, 80, 10);
-  color: white;
-}
-
-.card {
-  width: 60%;
-  padding: 0px;
-  text-align: left;
-  border-top: solid gray 1px;
-}
-
 .flex{
   display: flex;
 }
-
 .left-align {
   text-align: left;
 }
-
 .center-align {
   text-align: center;
 }
 
-.order-button{
-}
 
-.menu-display {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /*flex-wrap: wrap;*/
-}
 
-.home-image{
-  margin-top: 88px;
-}
+/* ------------------------------------------------------------------ HOMEPAGE IMAGES */
 
 img {
   max-width: 100%;
+  object-fit: contain;
 }
+
+
+
+/* ------------------------------------------------------------------ MENU NAVIGATION */
 
 .menu-nav {
   display: flex;
@@ -101,9 +80,7 @@ img {
 .menu-nav input {
   margin: 0px 50px;
 }
-.description{
-  padding: 0px 20px 10px 10px;
-}
+
 input {
   /*font-family: 'Kranky', cursive;*/
   font-variant: small-caps;
@@ -112,6 +89,42 @@ input {
   font-size: 30px;
   outline: none;
 }
+
+
+
+/* ------------------------------------------------------------------ MENU NAVIGATION */
+
+.menu-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*flex-wrap: wrap;*/
+}
+
+.dish {
+  font-size: 20px;
+  font-variant: small-caps;
+}
+
+.description{
+  padding: 0px 20px 10px 10px;
+}
+
+.menu {
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.card {
+  width: 60%;
+  padding: 0px;
+  text-align: left;
+  border-top: solid gray 1px;
+}
+
+
+
+/* ------------------------------------------------------------------ MENU BUTTONS */
+
 .btn {
   background-color: white;
   color: rgb(0, 80, 10);
@@ -154,4 +167,16 @@ input:hover {
   cursor: pointer;
   color: white;
   text-shadow: 0 0 1px rgb(0, 80, 10);
+}
+
+
+
+/* ------------------------------------------------------------------ FOOTER */
+
+
+footer {
+  padding: 0.5em;
+  width: 100%;
+  background-color: rgb(0, 80, 10);
+  color: white;
 }
