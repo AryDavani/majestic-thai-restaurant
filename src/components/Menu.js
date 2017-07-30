@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import MenuItem from './MenuItem';
 
 export default class Menu extends Component {
@@ -73,7 +74,7 @@ export default class Menu extends Component {
           <input value="Appetizers" type="button" onClick={ this._handleSelect } />
           <input value="Entrees" type="button" onClick={ this._handleSelect } />
           <input value="Desserts" type="button" onClick={ this._handleSelect } />
-          <button className="order-btn" onClick={ this.state._handleYourOrder }>Place Order {this.state.order.items.length}</button>
+          <NavLink to="/order"><button className="order-btn" onClick={ this.state._handleYourOrder }>Place Order {this.state.order.items.length}</button></NavLink>
         </div>
         <div className="menu-display">
           { categoryItems }

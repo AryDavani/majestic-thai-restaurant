@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 
-export default class Contact extends Component {
+export default class Order extends Component {
   constructor() {
     super();
   }
   render(){
     return (
-      <h1>This is my contact page</h1>
+      <h1>Order page here</h1>
     )
   }
 }
