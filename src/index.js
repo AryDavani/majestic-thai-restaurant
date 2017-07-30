@@ -9,7 +9,7 @@ import Menu from './components/Menu';
 // import Order from './components/Order';
 import Homepage from './components/Homepage';
 import About from './components/About';
-// import Contact from './components/Contact';
+import Contact from './components/Contact';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -18,7 +18,7 @@ ReactDOM.render(
         <Route path='/menu' component={Menu}/>
         {/* <Route path='/order' component={Order}/> */}
         <Route path='/about' component={About}/>
-        {/* <Route path='/contact' component={Contact}/> */}
+        <Route path='/contact' component={Contact}/>
         <Route path='/' component={Homepage}/>
       </Switch>
     </BaseLayout>
