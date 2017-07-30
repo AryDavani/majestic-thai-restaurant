@@ -16,28 +16,32 @@ body {
   top: 0;*/
 }
 .center-nav {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   list-style: none;
   text-transform: uppercase;
   font-family: 'Fredericka the Great', cursive;
 }
-.center-nav a {
+a {
   color: black;
   text-decoration: none;
-  margin: 20px 50px;
+  margin: 15px 45px;
   font-size: 40px;
+  padding: 10px;
+
 }
 .center-nav a:hover {
   cursor: pointer;
-  color: #fff;
-  text-shadow: 0 0 2px rgb(0, 80, 10);
+  color: rgb(0, 80, 10);
+  /*color: #005F32;*/
+  /*text-shadow: 0 0 2px rgb(0, 80, 10);*/
 }
 .selected {
-  color: red;
+  color: rgb(0, 80, 10);
+  padding: 9px;
+  border: 1px solid rgb(0, 80, 10);
 }
-
-
 
 /* ------------------------------------------------------------ FLEX BOX STYLING */
 
@@ -56,6 +60,9 @@ body {
 .center-align {
   text-align: center;
 }
+.hor-flex {
+  justify-content: center;
+}
 
 
 
@@ -63,10 +70,37 @@ body {
 
 img {
   max-width: 100%;
-  object-fit: contain;
+  /*object-fit: cover;*/
 }
 
-
+.home-image {
+  background-image: url('../images/Thai-Food1.jpg');
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+}
+.home-image h1 {
+  color: white;
+  font-weight: 100;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 100px;
+  padding: 2% 4%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid white;
+}
+.home-image h2 {
+  color: white;
+  font-weight: 100;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 60px;
+  margin-top: 100px;
+  text-shadow: 0 0 5px black;
+}
+.logo {
+  height: 50px;
+  float: left;
+}
 
 /* ------------------------------------------------------------------ MENU NAVIGATION */
 
@@ -88,8 +122,15 @@ input {
   background-color: white;
   font-size: 30px;
   outline: none;
+  padding: 5px;
 }
 
+input:hover {
+  cursor: pointer;
+  color: rgb(0, 80, 10);
+  border: 1px solid rgb(0, 80, 10);
+  padding: 4px;
+}
 
 
 /* ------------------------------------------------------------------ MENU NAVIGATION */
@@ -163,13 +204,25 @@ input {
   color: white;
 }
 
-input:hover {
-  cursor: pointer;
-  color: white;
-  text-shadow: 0 0 1px rgb(0, 80, 10);
+/* ------------------------------------------------------------------ ABOUT PAGE */
+
+.about-page {
+  padding-top: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-
-
+.about-page h1 {
+  font-family: 'PT Sans', sans-serif;
+}
+.about-page p {
+  font-family: 'PT Sans', sans-serif;
+  line-height: 30px;
+  text-indent: 50px;
+  width: 50%;
+  margin: 20px;
+}
 
 /* ------------------------------------------------------------------ FOOTER */
 
