@@ -4,9 +4,7 @@ import Logo from '../images/elephant-logo2.png';
 
 
 export default class Navbar extends Component {
-  constructor(){
-    super();
-  }
+
   render(){
     return (
       <nav className="fixed-nav flex">

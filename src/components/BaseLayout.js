@@ -3,9 +3,6 @@ import Navbar from './Navbar';
 // import Footer from './Footer';
 
 export default class BaseLayout extends Component {
-  constructor() {
-  super();
-}
 
   render(){
     return (

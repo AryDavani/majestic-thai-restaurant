@@ -12,28 +12,37 @@ export default class Menu extends Component {
         Entrees: [],
         Desserts: []
       },
+      category: 'Appetizers',
       order: {
         total: 0,
         items: []
       },
-      category: 'Appetizers'
+      displayOrder: false
     }
 
-    // this._handleYourOrder = this._handleYourOrder.bind(this);
+    this._handleYourOrder = this._handleYourOrder.bind(this);
     this._handleSelect = this._handleSelect.bind(this);
     this._handleAddToOrder = this._handleAddToOrder.bind(this);
 
   }
 
-  // _handleYourOrder(event) {
-  //   event.preventDefault();
-  //
-  // }
+  _handleYourOrder() {
+
+    console.log("this is", this);
+  }
 
   _handleSelect(event) {
-    this.setState({
-      category: event.target.value
-    });
+    console.log(this.state.displayOrder);
+    if (event.target.value == "Order") {
+      this.setState({
+        displayOrder: true
+      })
+      console.log("order button clicked");
+    } else {
+      this.setState({
+        category: event.target.value
+      });
+    }
   }
 
   _handleAddToOrder(menuItem) {
@@ -70,6 +79,10 @@ export default class Menu extends Component {
     let categoryItems = this.state.menu[this.state.category].map(function(item){
       return <MenuItem key={ item.dish } item={ item } handleAddToOrder={ that._handleAddToOrder }/>
 
+    // let orderItems = this.state.order.items.map(function(index, item) {
+    //   return <Order key={ index }
+    // })
+
     });
 
     return(
@@ -78,13 +91,12 @@ export default class Menu extends Component {
           <input value="Appetizers" type="button" onClick={ this._handleSelect } />
           <input value="Entrees" type="button" onClick={ this._handleSelect } />
           <input value="Desserts" type="button" onClick={ this._handleSelect } />
-          <Link to="/order"><button className="order-btn" onClick={ this._handleYourOrder }>Place Order {this.state.order.items.length}</button></Link>
+          <button value="Order" className="order-btn" onClick={ this._handleSelect }>Place Order {this.state.order.items.length}</button>
         </div>
         <div className="menu-display">
           { categoryItems }
         </div>
       </div>
-
     )
   }
 }
