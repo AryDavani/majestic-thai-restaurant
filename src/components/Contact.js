@@ -6,7 +6,19 @@ export default class Contact extends Component {
   }
   render(){
     return (
-      <h1>This is my contact page</h1>
+      <div className="contact-img">
+        <div className="flex column hours">
+          <p>Hours</p>
+          <p>Lunch</p>
+          <p>Monday - Thursday 11:30 AM - 2:30 PM</p>
+          <p>Friday, Saturday & Sunday 11:30 AM - 4 PM</p>
+          <p>Dinner</p>
+          <p>Monday - Thursday 5 pm - 10 pm</p>
+          <p>Friday, Saturday & Sunday 5 pm - 10 pm</p>
+          <p>Address</p>
+          <p>209 N. Hollywood Blvd</p>
+        </div>
+      </div>
     )
   }
 }
