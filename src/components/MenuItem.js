@@ -37,14 +37,14 @@ export default class MenuItem extends Component {
         </div>
         <div className="flex center-flex">
           <p className="price">${ this.props.item.price }</p>
-          <select onChange={ this._handleQty } className="btn">
+          <select onChange={ this._handleQty } className="button">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
-          <button onClick={ this._handleAddToOrder } className="btn">Add to Order</button>
+          <button onClick={ this._handleAddToOrder } className="button">Add to Order</button>
         </div>
       </div>
     )

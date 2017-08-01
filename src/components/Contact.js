@@ -6,10 +6,9 @@ export default class Contact extends Component {
   }
   render(){
     return (
-      <div className="contact-img">
-        <div className="flex column hours">
-          <p>Hours</p>
-          <p>Lunch</p>
+      <div className="contact-img flex hor-flex">
+        <div className="flex column center-flex hor-flex hours">
+          <p className="time">Lunch</p>
           <p>Monday - Thursday 11:30 AM - 2:30 PM</p>
           <p>Friday, Saturday & Sunday 11:30 AM - 4 PM</p>
           <p>Dinner</p>
