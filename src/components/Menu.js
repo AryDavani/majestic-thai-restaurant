@@ -119,7 +119,7 @@ export default class Menu extends Component {
   }
 
   componentDidMount(){
-    fetch('http://tiny-lasagna-server.herokuapp.com/collections/reactthaimenu')
+    fetch('https://tiny-lasagna-server.herokuapp.com/collections/reactthaimenu')
     .then(results => {
       return results.json();
     }).then(data => {
