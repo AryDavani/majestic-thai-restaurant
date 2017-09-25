@@ -20,16 +20,23 @@ export default class Menu extends Component {
       displayOrder: false
     }
 
-// binding custom methods to 'this'
-    this._handleFormSubmit = this._handleFormSubmit.bind(this);
-    this._handleSelect = this._handleSelect.bind(this);
-    this._handleAddToOrder = this._handleAddToOrder.bind(this);
-    this._total = this._total.bind(this);
-    this._checkout = this._checkout.bind(this);
-
   }
 
-  _handleFormSubmit(event) {
+  _handleDelete = (event) => {
+    console.log("delete pressed", event.target.value );
+    let stateItems = this.state.order.items;
+    let newItems = stateItems.splice(event.target.value, 1);
+    let total = this.state.order.total - newItems[0].price;
+    
+    this.setState({
+      order: {
+        total: total,
+        items: stateItems
+      }
+    })
+  }
+
+  _handleFormSubmit = (event) => {
     event.preventDefault();
 
     let object = {
@@ -53,7 +60,7 @@ export default class Menu extends Component {
     event.target.reset();
   }
 
-  _handleSelect(event) {
+  _handleSelect = (event) => {
 
     if (event.target.value === "Order") {
       console.log("order button clicked");
@@ -67,11 +74,10 @@ export default class Menu extends Component {
         category: event.target.value,
         displayOrder: false
       });
-      console.log('menu', this.state);
     }
   }
 
-  _handleAddToOrder(menuItem) {
+  _handleAddToOrder = (menuItem) => {
 
     let price = (Number(menuItem.price) * menuItem.qty);
     let total = this.state.order.total;
@@ -88,10 +94,9 @@ export default class Menu extends Component {
         items
       }
     })
-    console.log("items", this.state.order.items);
   }
 
-  _total() {
+  _total = () => {
     return (
       <div className="card flex">
         <div className="flex-grow">
@@ -104,7 +109,7 @@ export default class Menu extends Component {
     )
   }
 
-  _checkout() {
+  _checkout = () => {
     return (
       <form className="order-form center-flex flex" onSubmit={ this._handleFormSubmit }>
         <div className="flex-grow">
@@ -139,7 +144,7 @@ export default class Menu extends Component {
     });
 
     let orderItems = this.state.order.items.map((item, index) => {
-      console.log("map item", item);
+      // console.log("map item", item);
       let randNum = Math.random();
 
       return (
@@ -150,6 +155,7 @@ export default class Menu extends Component {
           <div className="flex center-flex">
             <p className="qty">qty: { item.qty }</p>
             <p>${ item.price }</p>
+            <button value={ index } onClick={ this._handleDelete } className="button delete">Delete</button>
           </div>
         </div>
       )
