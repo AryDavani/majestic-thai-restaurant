@@ -14,8 +14,7 @@ export default class Contact extends Component {
           <p>Dinner</p>
           <p>Monday - Thursday 5 pm - 10 pm</p>
           <p>Friday, Saturday & Sunday 5 pm - 10 pm</p>
-          <p>Address</p>
-          <p>209 N. Hollywood Blvd</p>
+          <p>Address: 209 N. Hollywood Blvd</p>
         </div>
       </div>
     )

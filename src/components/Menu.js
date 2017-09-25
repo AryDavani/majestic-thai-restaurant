@@ -27,7 +27,7 @@ export default class Menu extends Component {
     let stateItems = this.state.order.items;
     let newItems = stateItems.splice(event.target.value, 1);
     let total = this.state.order.total - newItems[0].price;
-    
+
     this.setState({
       order: {
         total: total,
@@ -43,7 +43,7 @@ export default class Menu extends Component {
       name: event.target.name.value,
       number: event.target.number.value,
       items: this.state.order.items,
-      total: this.state.order.total
+      total: this.state.order.total.toFixed([2])
     }
 
     fetch("https://tiny-lasagna-server.herokuapp.com/collections/reactthaiorders", {
@@ -114,7 +114,7 @@ export default class Menu extends Component {
       <form className="order-form center-flex flex" onSubmit={ this._handleFormSubmit }>
         <div className="flex-grow">
           <label className="dish">Name</label>
-          <input name="name" type="text" className="form-input" placeholder="Name" />
+          <input name="name" type="text" className="form-input" placeholder="First and Last" />
           <label className="dish">Tel. Number</label>
           <input name="number" type="tel" className="form-input" placeholder="1-(555)-555-5555" />
         </div>
