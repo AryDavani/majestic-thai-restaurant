@@ -169,6 +169,12 @@ export default class Menu extends Component {
           <input className="input" value="Desserts" type="button" onClick={ this._handleSelect } />
           <button value="Order" className="order-btn" onClick={ this._handleSelect }>Your Order {this.state.order.items.length}</button>
         </div>
+        <div className="center-align">
+          {/*
+            See Calorie Information
+            iFrame to Bite Size
+          */}
+        </div>
         <div className="menu-display">
           { this.state.displayOrder ? orderItems : categoryItems }
         </div>

@@ -10,14 +10,16 @@ import Homepage from './components/Homepage';
 import About from './components/About';
 import Contact from './components/Contact';
 
+import PROJECT_URI from './utility';
+
 ReactDOM.render(
   <BrowserRouter>
     <BaseLayout>
       <Switch>
-        <Route path='/menu' component={Menu}/>
-        <Route path='/about' component={About}/>
-        <Route path='/contact' component={Contact}/>
-        <Route path='/' component={Homepage}/>
+        <Route exact path={PROJECT_URI + '/'} component={Homepage}/>
+        <Route path={PROJECT_URI + '/menu'} component={Menu}/>
+        <Route path={PROJECT_URI + '/about'} component={About}/>
+        <Route path={PROJECT_URI + '/contact'} component={Contact}/>
       </Switch>
     </BaseLayout>
   </BrowserRouter>
